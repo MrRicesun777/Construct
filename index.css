@@ -1,0 +1,566 @@
+@import "assets_DesignConstruct/fonts/fonts.css";
+
+:root {
+  /* fontsize */
+  --h1fontSize: 64px;
+  --h2fontSize: 26px;
+  --h3fontSize: 22px;
+  --h4fontSize: 20px;
+  --h5fontSize: 18px;
+  --standaardfontsize: 16px;
+
+  /* kleuren */
+  --geleKleur: #f7c016;
+  --grijzeAchtergrond: #555;
+  --lichtgrijzeAchtergrond: #eee;
+
+  /* font */
+  --font: CooperHewitt-Light;
+  --fontHeavy: CooperHewitt-Heavy;
+  --fontBold: CooperHewitt-Bold;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font);
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+}
+.active {
+  background-color: var(--geleKleur);
+}
+.menu-container {
+  height: 80px;
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  .hamburger {
+    display: none;
+  }
+  img {
+    width: 170px;
+    height: 38px;
+  }
+
+  ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    li {
+      margin: 12px;
+      padding: 6px 10px;
+      list-style: none;
+      a {
+        color: var(--grijzeAchtergrond);
+        text-decoration: none;
+      }
+    }
+  }
+}
+.hero {
+  width: 100%;
+  height: 700px;
+  background: url(../construct/assets_DesignConstruct/img/header_afbeelding.jpg)
+    rgba(0, 0, 0, 0.541);
+  background-blend-mode: multiply;
+  background-size: cover;
+
+  .container {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    .hero-text {
+      width: 50%;
+      h1 {
+        font-family: CooperHewitt;
+        color: white;
+        line-height: 74px;
+      }
+      p {
+        margin: 40px 0;
+        color: white;
+        font-size: 18px;
+        line-height: 28px;
+      }
+
+      .hero-a {
+        border-radius: 30px;
+        font-size: 16;
+        padding: 12px 35px;
+        text-decoration: none;
+        background-color: white;
+        color: black;
+      }
+    }
+  }
+}
+
+/* over ons */
+.containerInfo {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+}
+
+.containerInfo h2,
+.containerInfo h3 {
+  font-size: var(--h3fontSize);
+  margin: 0;
+  .containerInfo p {
+    font-size: var(--standaardfontsize);
+    line-height: 20px;
+    margin: 10px 0;
+    color: var(--grijzeAchtergrond);
+  }
+}
+
+.containerInfo p {
+  font-size: var(--standaardfontsize);
+  line-height: 20px;
+  margin: 10px 0;
+  color: var(--grijzeAchtergrond);
+}
+
+.left-column {
+  margin-top: 30px;
+  grid-column: 1;
+}
+
+.right-column {
+  grid-column: 2;
+  margin-top: 68px;
+}
+
+/* projects */
+
+.typeTitle {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  height: 5em;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.typeTitle h2 {
+  font-size: var(--h2fontSize);
+  margin-bottom: 10px;
+}
+.typeTitle p {
+  font-size: var(--standaardfontsize);
+  color: var(--grijzeAchtergrond);
+}
+.projects {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* Twee kolommen op mobiel */
+
+  gap: 1px;
+}
+
+.projects img {
+  width: 100%; /* Zorg ervoor dat de afbeeldingen de volledige breedte van hun kolom innemen */
+  height: auto; /* Behoud de aspect ratio van de afbeeldingen */
+}
+
+/* call to action */
+.callToAction {
+  background-color: var(--geleKleur);
+  width: 100%;
+  height: 115px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--lichtgrijzeAchtergrond);
+}
+
+.callToAction .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.callToAction h4 {
+  font-size: 19px;
+  margin: 0;
+}
+
+.callToAction a,
+button {
+  background-color: var(--lichtgrijzeAchtergrond);
+  color: var(--grijzeAchtergrond);
+  border-radius: 30px;
+  font-size: 14px;
+  text-transform: uppercase;
+  padding: 14px 20px;
+  text-decoration: none;
+  margin-top: 20px;
+}
+/* service */
+.service-container {
+  background-color: var(--lichtgrijzeAchtergrond);
+}
+
+.services {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 30px;
+}
+
+.service {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 20%;
+  margin-bottom: 50px;
+}
+.service img {
+  width: auto;
+  height: 75px;
+  margin-bottom: 10px;
+}
+
+.service h2 {
+  margin: 10px -30px;
+}
+
+.service h4,
+.service p {
+  margin-top: 12px;
+  text-align: center;
+}
+
+section {
+  width: 100%;
+  height: 500px;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
+}
+/* banner */
+.banner {
+  max-width: 1200px;
+  color: white;
+}
+
+.bannerHeader h2 {
+  font-size: 54px;
+  line-height: 68px;
+  text-transform: uppercase;
+  width: 50%;
+}
+.bannerHeader p {
+  font-size: 16px;
+  line-height: 28px;
+  width: 36em;
+  margin: 25px 0;
+}
+a.button {
+  background-color: var(--lichtgrijzeAchtergrond);
+  color: var(--grijzeAchtergrond);
+  border-radius: 30px;
+  font-size: 14px;
+  text-transform: uppercase;
+  padding: 14px 20px;
+  text-decoration: none;
+}
+
+/* news */
+
+.news {
+  .container {
+    #news-txt {
+      margin: 30px 0 40px 0;
+      p {
+        margin: 15px 0;
+      }
+    }
+
+    .news-items {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      padding: 0;
+
+      margin: 30px 0;
+      p {
+        margin: 15px 0;
+        color: var(--grijzeAchtergrond);
+      }
+
+      .news-item {
+        flex: 0 0 calc(33.333% - 20px);
+        margin-bottom: 20px;
+
+        img {
+          max-width: 100%;
+          height: auto;
+        }
+      }
+    }
+  }
+}
+/* call to action 2 */
+
+.callToActionTwee {
+  background: var(--geleKleur)
+    url(assets_DesignConstruct/img/achtergrond_wereld.png);
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 320px;
+  display: flex;
+  align-items: center;
+}
+
+.callToActionTwee h2 {
+  font-size: 32px;
+  margin-bottom: 5px;
+}
+
+.callToActionTwee p {
+  width: 536px;
+  line-height: 1.5;
+}
+
+.callToActionTwee ul {
+  margin-top: 20px;
+  line-height: 1.5;
+  margin-left: 16px;
+}
+.buttonContainer {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 50px;
+  margin-top: -120px;
+}
+
+.buttonCallToActionTwee {
+  border-radius: 30px;
+  font-size: 14px;
+  text-transform: uppercase;
+  padding: 14px 20px;
+  background-color: var(--lichtgrijzeAchtergrond);
+  text-decoration: none;
+  color: var(--grijzeAchtergrond);
+}
+
+/* footer */
+footer {
+  background-color: var(--grijzeAchtergrond);
+  color: var(--lichtgrijzeAchtergrond);
+  padding: 50px 0;
+}
+.footerColumn p {
+  margin: 0;
+  line-height: 2;
+}
+.footerColumn img {
+  width: 200px;
+  height: auto;
+}
+.footerColumn h3 {
+  color: var(--lichtgrijzeAchtergrond);
+}
+.footer {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+.links-firstColum {
+  width: 12em;
+}
+.footerColumn {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.footer a {
+  color: var(--lichtgrijzeAchtergrond);
+  text-decoration: none;
+}
+
+/* @media screen and (max-width: 768px) {
+  .projects {
+    display: grid;
+    grid-template-columns: repeat(2, 2fr);
+    gap: 1px;
+  }
+} */
+/* 
+  Mobiel menu:
+
+      Het mobiele menu is over de volledige breedte van het scherm en heeft een witte achtergrond (zie design mobiel menu)
+      Het menu is standaard verborgen en opent wanneer er op het hamburger menu icoon wordt geklikt.
+      Het hamburger menu icoon is op desktop verborgen en zichtbaar op mobiel.
+      De menu items staan onder elkaar in het mobiele menu en centraal gecentreerd.
+      Het actieve item heeft een gele tekstkleur.
+
+
+      
+     
+
+      call to action1 en 3: 
+      Op mobiel staat de knop onder te tekst en is de knop 100% breed.
+
+      services: 
+      Op mobiel hebben de services een breedte van 100%
+
+      nieuws:
+      Op mobiel staan de artikelen onder elkaar
+
+      footer:
+      Op mobiel staan de kolommen onder elkaar
+  */
+@media screen and (max-width: 768px) {
+  .container {
+    width: 100%; /* Aangepast om de container 90% van de viewport breedte te maken */
+    max-width: none; /* Aangepast om de maximale breedte op te heffen */
+    margin: 0 auto; /* Centreren van de container */
+    padding: 1em;
+    overflow: hidden;
+  }
+
+  .menu-items {
+    display: none;
+  }
+  .menu-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    #hamburger {
+      font-size: 30px;
+      display: block !important;
+    }
+  }
+  .menu-items.active {
+    display: flex;
+    flex-direction: column;
+  }
+  .menu-items {
+    width: 100%;
+  }
+  /* hero */
+  /* text */
+  .containerInfo {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+  }
+  .right-column {
+    margin: auto;
+    line-height: 37px;
+  }
+
+  /* Projects */
+  .projects {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  /* gele banner  */
+  .buttonCallToActionTwee {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 102px;
+  }
+  .callToAction {
+    height: 230px;
+  }
+  .callToAction h4 {
+    margin-top: 108px;
+    width: 98%;
+    padding: 1em;
+  }
+  /* Call to action 1 and 3 */
+  .callToAction .container {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 37px;
+  }
+
+  /* Services */
+  .service-container {
+    width: 100%;
+  }
+  .services {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .service {
+    width: 90%;
+  }
+  .service p {
+    width: 33em;
+  }
+  /* banner */
+  section {
+    height: 40em;
+  }
+
+  .bannerImg {
+    background-size: cover;
+    background-position: right center;
+  }
+
+  .bannerHeader {
+    h2 {
+      width: 100%;
+      font-size: 4em;
+    }
+
+    p {
+      margin-top: 0.5em;
+      margin-bottom: 3em; /* Voeg hier de gewenste ruimte toe */
+    }
+  }
+  /* News */
+  #news-txt {
+    align-items: center;
+  }
+
+  #news-txt h2 {
+    margin-bottom: 0em;
+    font-size: var(--h2fontSize);
+  }
+
+  .news .news-items {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .buttonCallToActionTwee {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 154px;
+    height: 40px;
+  }
+
+  .buttonContainer {
+    height: 150px;
+  }
+
+  /* Footer */
+  footer .footer {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 52px;
+  }
+}
