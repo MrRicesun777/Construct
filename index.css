@@ -69,7 +69,7 @@ body {
 .hero {
   width: 100%;
   height: 700px;
-background-image: url('assets_DesignConstruct/img/header_afbeelding.jpg');
+background-image: url('assets_DesignConstruct/img/header.jpg');
     rgba(0, 0, 0, 0.541);
   background-blend-mode: multiply;
   background-size: cover;
